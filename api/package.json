@@ -1,0 +1,37 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon -L --inspect=0.0.0.0 src/index.js",
+    "docker:up": "docker-compose down && docker-compose up --build",
+    "test": "jest --colors --noStackTrace --passWithNoTests --runInBand",
+    "test:watch": "jest --watchAll --colors --noStackTrace --passWithNoTests --runInBand",
+    "test:cov": "jest --coverage"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "dependencies": {
+    "fastify": "^4.26.1",
+    "jest": "^29.7.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.23.9",
+    "@babel/node": "^7.23.9",
+    "@babel/plugin-transform-runtime": "^7.23.9",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.23.9",
+    "@babel/runtime": "^7.23.9",
+    "@types/jest": "^29.5.12",
+    "coveralls": "^3.1.1",
+    "nodemon": "^3.0.3",
+    "standard": "^17.1.0"
+  }
+}
